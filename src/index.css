@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import "animate.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "offbit";
+  src: url("./fonts/OffBitTrial-Bold.otf");
+}
+
+@font-face {
+  font-family: "offbit-regular";
+  src: url("./fonts/OffBitTrial-Regular.otf");
+}
+
+.active {
+  @apply text-[#39ff14];
+}
+
+a {
+  text-decoration: none;
+}
+
+.sombra {
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+}
+
+/* -------------------------------------loader */
+.loader {
+  color: #39ff14;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 78px;
+  opacity: 1;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+.loader:before {
+  content: "{";
+  display: inline-block;
+  animation: pulse 0.4s alternate 20 ease-in-out;
+}
+.loader:after {
+  content: "}";
+  display: inline-block;
+  animation: pulse 0.4s 0.3s alternate 20 ease-in-out;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+/* -------------------------------------loader */
+
+/* -------------------------------------tagcloud */
+.tagcloud {
+  color: #00ed64;
+}
+
+/* las mediaqueries para tagcloud no funcionan para la animación solo para el wrapper */
+@media screen and (max-width: 640px) {
+  .tagcloud {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+.tagcloud--item {
+  font-size: 1.5rem;
+  font-family: "offbit-regular";
+}
+/* -------------------------------------tagcloud */
+
+.map-container {
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width: 640px) {
+  .map-container {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
