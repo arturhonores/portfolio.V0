@@ -4,7 +4,7 @@ import iconoVerde from "../assets/marker-verde.png"
 
 export default function Home() {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyAA5i-6dHheKwdNk1UKnEspFn5nVnO_XYQ",
+        googleMapsApiKey: import.meta.env.VITE_MAPS_API_KEY,
     });
 
     if (!isLoaded) return <div>Loading...</div>;
